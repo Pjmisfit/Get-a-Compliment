@@ -1,0 +1,132 @@
+#enterName{
+	color: red;
+	font-family: helvetica-nueue;
+}
+#editfield{
+	resize: none;
+	text-align: center;
+	/*display: block;*/
+	/*padding: 20px;*/
+	margin-left: -3px;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	font-size: 26px;
+	font-family: sans-serif;
+	border: none;
+	outline: none;
+	background: #EEE;
+	font-weight: 100;
+	color: #222;
+}
+#submit{
+	color: #fff;
+  	background-color: #4da74d;
+  	border: 1px solid /*#4cae4c*/ #999;
+	padding: 12px 90px;
+	border-radius: 2.5px;
+	outline: none;
+	cursor: pointer;
+	font-family: sans-serif, helvetica-nueue;
+	font-size: 18px;
+	letter-spacing: 0.8px;
+}
+#submit:hover{
+	background: #3d8a3d;
+}
+#cancel{
+	color: #fff;
+  	background-color: #e73c54;
+  	border: 1px solid /*#fb8f90*/ #999;
+	padding: 12px 90px;
+	border-radius: 2.5px;
+	outline: none;
+	cursor: pointer;
+	font-family: sans-serif, helvetica-nueue;
+	font-size: 18px;
+	letter-spacing: 0.8px;
+}
+#cancel:hover{
+	background: #d12d45;
+	color: #DDD;
+}
+@media (max-width: 549px) {
+	#cancel{
+		margin-top: 25px;
+	}
+}
+@media (max-width: 300px) {
+	#cancel{
+		padding: 12px 60px;;
+	}
+	#submit{
+		padding: 12px 60px;;
+	}
+}
+.OutputCont{
+	text-align: center;
+}
+.buttCont{
+	text-align: center;
+}
+#outputHere{
+	margin-top: 100px;
+	color: #FFF;
+	font-family: helvetica-nueue;
+	font-size: 46px;
+}
+#outputHere:first-letter{
+	text-transform: capitalize;
+}
+body{
+	background: /*-webkit-linear-gradient(left top,#141E30,#243B55)*/ #141E30;
+	animation: changecolor 35s infinite;
+	-webkit-animation: changecolor 35s infinite;
+	-moz-animation: changecolor 35s infinite;
+	-ms-animation: changecolor 35s infinite;
+	-webkit-animation-direction: alternate;
+	-moz-animation-direction: alternate;
+	-ms-animation-direction: alternate;
+	animation-direction: alternate;
+}
+@-webkit-keyframes changecolor{
+	0%{
+		background: #141E30;
+	}
+
+	15%{
+		background: #283E51;
+	}
+
+	30%{
+		background: #22313F;
+	}
+
+	45%{
+		background: #351708;
+	}
+
+	60%{
+		background: #052645;
+	}
+	75%{
+		background: #282f4b;
+	}
+	90%{
+		background: #2A2A2A;
+	}
+	100%{
+		background: #421c1d;
+	}
+
+	
+}
+::-moz-placeholder {
+  color: #CCD;
+}
+::-ms-input-placeholder {
+  color: #CCD;
+}
+::-webkit-input-placeholder {
+  color: #CCD;
+}
