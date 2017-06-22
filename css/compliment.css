@@ -1,6 +1,7 @@
 #enterName{
-	color: red;
-	font-family: helvetica-nueue;
+	color: #f35369;
+	font-family: 'hind', helvetica-nueue;
+	letter-spacing: 1.1px;
 }
 #editfield{
 	resize: none;
@@ -12,22 +13,23 @@
 	padding-top: 30px;
 	padding-bottom: 10px;
 	font-size: 26px;
-	font-family: sans-serif;
+	font-family: 'hind', sans-serif;
 	border: none;
 	outline: none;
 	background: #EEE;
 	font-weight: 100;
-	color: #222;
+	color: #5475b1;
+	border-radius: 3px;
 }
 #submit{
 	color: #fff;
   	background-color: #4da74d;
-  	border: 1px solid /*#4cae4c*/ #999;
+  	border: 1px solid #4cae4c /*#666*/;
 	padding: 12px 90px;
 	border-radius: 2.5px;
 	outline: none;
 	cursor: pointer;
-	font-family: sans-serif, helvetica-nueue;
+	font-family: 'oswald', sans-serif, helvetica-nueue;
 	font-size: 18px;
 	letter-spacing: 0.8px;
 }
@@ -37,12 +39,12 @@
 #cancel{
 	color: #fff;
   	background-color: #e73c54;
-  	border: 1px solid /*#fb8f90*/ #999;
+  	border: 1px solid #e6797a /*#999*/;
 	padding: 12px 90px;
 	border-radius: 2.5px;
 	outline: none;
 	cursor: pointer;
-	font-family: sans-serif, helvetica-nueue;
+	font-family: 'oswald', sans-serif, helvetica-nueue;
 	font-size: 18px;
 	letter-spacing: 0.8px;
 }
@@ -71,8 +73,9 @@
 }
 #outputHere{
 	margin-top: 100px;
-	color: #FFF;
-	font-family: helvetica-nueue;
+	color: #EEF;
+	font-family: 'niconne', helvetica-nueue;
+	font-weight: 100;
 	font-size: 46px;
 }
 #outputHere:first-letter{
@@ -80,16 +83,45 @@
 }
 body{
 	background: /*-webkit-linear-gradient(left top,#141E30,#243B55)*/ #141E30;
-	animation: changecolor 35s infinite;
 	-webkit-animation: changecolor 35s infinite;
-	-moz-animation: changecolor 35s infinite;
-	-ms-animation: changecolor 35s infinite;
+	animation: changecolor 35s infinite;
 	-webkit-animation-direction: alternate;
-	-moz-animation-direction: alternate;
-	-ms-animation-direction: alternate;
 	animation-direction: alternate;
 }
+
 @-webkit-keyframes changecolor{
+	0%{
+		background: #141E30;
+	}
+
+	15%{
+		background: #283E51;
+	}
+
+	30%{
+		background: #22313F;
+	}
+
+	45%{
+		background: #351708;
+	}
+
+	60%{
+		background: #052645;
+	}
+	75%{
+		background: #282f4b;
+	}
+	90%{
+		background: #2A2A2A;
+	}
+	100%{
+		background: #421c1d;
+	}
+
+	
+}
+@keyframes changecolor{
 	0%{
 		background: #141E30;
 	}
@@ -123,10 +155,13 @@ body{
 }
 ::-moz-placeholder {
   color: #CCD;
+  font-family: 'slabo 27px';
 }
 ::-ms-input-placeholder {
   color: #CCD;
+  font-family: 'slabo 27px';
 }
 ::-webkit-input-placeholder {
   color: #CCD;
+  font-family: 'slabo 27px';
 }
