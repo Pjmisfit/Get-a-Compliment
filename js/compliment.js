@@ -1,14 +1,21 @@
 $(document).ready(function() {
    $("#editfield").focus();
-   $("#submit").click(function(){
 
+  $(document).keydown(function(e){ /*enter to submit*/
+      if (e.keyCode == 13) { 
+        e.preventDefault(); 
+         $('#submit').click();
+      }
+  });   
+   $("#submit").click(function(){
     var valuefield = $.trim($("#editfield").val());
-      // var remCharacters = ',.!@#$%^&*()_+<>?/`~';
-      // $('#enterName').show();
       $('#outputHere').show();
 
-      if (valuefield == "") {
-          $('#enterName').text("Enter Your Name. ").show().fadeOut(5000);
+        // var dont = $("#editfield").val().match(/^[a-zA-Z]+$/);
+        var dont = $("#editfield").val().match(/^[1234567890+_)(*&^%$#@!:;"//'?/><,."{}) ]+$/);/*filter characters*/
+        var lent = $("#editfield").val().length;
+      if (valuefield == "" || valuefield == dont || lent < 2) {
+          $('#enterName').text("enter your name. ").show().fadeOut(5000);
           $("#editfield").focus();
       }
       else {
@@ -22,7 +29,6 @@ $(document).ready(function() {
         'Your eyes are breathtaking!',
         "You're hotter than the sun!",
         "You're like sunshine on a rainy day.",
-        'You were cool way before hipsters were cool. How bah dah!?',
         'You smell really good. :)',
         'Being around you makes everything better!',
         "You're wonderful.", 
@@ -40,7 +46,18 @@ $(document).ready(function() {
         'You look great today.',
         "You're a smart cookie.",
         'I bet you make babies smile.', 
-        "On a scale of 1 to 10, you're an 11."
+        "On a scale of 1 to 10, you're an 11.",
+        "You’re so special.",
+        "You’re talented.",
+        "You’re creative.",
+        "You’re inspiring.",
+        "You’re fantastic.",
+        "You’re one of a kind.",
+        "You’re unique.",
+        "You do things with excellence.",
+        "You make a difference.",
+        "The World needs more people like you."
+
         ];
 
         var rand = Math.floor(Math.random() * myArray.length);
@@ -51,10 +68,10 @@ $(document).ready(function() {
   });
 });
 
-
 $('#cancel').click(function(){
      $("#editfield").focus();
      $('#enterName').hide();
      $('#outputHere').hide();
      $("#outputHere").empty();
 });
+
